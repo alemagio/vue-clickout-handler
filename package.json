@@ -1,7 +1,7 @@
 {
   "name": "vue-click-out-detector",
   "repository": "alemagio/vue-click-out-detector",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "A simple directive to detect click events outside of a certain element, no dependency needed",
   "main": "index.js",
   "license": "MIT",
