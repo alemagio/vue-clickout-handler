@@ -1,6 +1,6 @@
 import {validator} from "./service/validator";
 
-export const VueClickOutDetector = {
+export const VueClickOut = {
   bind (el, binding) {
     if (!validator.validate(binding.value)) {
       return;

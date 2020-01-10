@@ -5,11 +5,11 @@ This is a simple directive to react when a click happens outside of a certain el
 ## Installation
 
 ```
-npm install vue-click-out-detector --save
+npm install vue-click-out --save
 ```
 
 ```
-yarn add vue-click-out-detector
+yarn add vue-click-out
 ```
 
 ## Basic Usage
@@ -17,14 +17,14 @@ yarn add vue-click-out-detector
 ```js
 // main.js
 
-import {VueClickOutDetector} from 'vue-click-out-detector';
+import {VueClickOut} from 'vue-click-out';
 
-Vue.directive('click-out-detector', VueClickOutDetector)
+Vue.directive('click-out', VueClickOut)
 ```
 
 ```vue
 <template>
-  <div v-click-out-detector="{handler: onClickOutside}">
+  <div v-click-out="{handler: onClickOutside}">
     ...
   </div>
 </template>
