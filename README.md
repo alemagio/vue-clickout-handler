@@ -5,11 +5,11 @@ This is a simple directive to react when a click happens outside of a certain el
 ## Installation
 
 ```
-npm install vue-click-out --save
+npm install vue-clickout-hanlder --save
 ```
 
 ```
-yarn add vue-click-out
+yarn add vue-clickout-hanlder
 ```
 
 ## Basic Usage
@@ -22,9 +22,11 @@ import {VueClickOut} from 'vue-click-out';
 Vue.directive('click-out', VueClickOut)
 ```
 
+You can pass just a callback and it will be used as handler
+
 ```vue
 <template>
-  <div v-click-out="{handler: onClickOutside}">
+  <div v-click-out="onClickOut">
     ...
   </div>
 </template>
@@ -32,7 +34,29 @@ Vue.directive('click-out', VueClickOut)
 <script>
   export default {
     methods: {
-      onClickOutside () {
+      onClickOut () {
+        // do something
+      }
+    }
+  }
+</script>
+```
+
+Or you can pass an object to include more options:
+
+```vue
+<template>
+  <div id="my-div">
+  </div>
+  <div v-click-out="{ handler: onClickOut, excluded: ['#my-div']}">
+    ...
+  </div>
+</template>
+
+<script>
+  export default {
+    methods: {
+      onClickOut () {
         // do something
       }
     }
