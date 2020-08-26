@@ -2,7 +2,7 @@
   "name": "vue-clickout-handler",
   "repository": "alemagio/vue-clickout-handler",
   "version": "0.0.0",
-  "description": "A simple directive to detect click events outside of a certain element, no dependency needed",
+  "description": "A simple zero dependencies directive to detect click events outside of a certain element",
   "main": "index.js",
   "license": "MIT",
   "private": false,
