@@ -1,5 +1,5 @@
 import test from 'ava'
-import { validate } from '../service/validate.js'
+import { validate } from '../util/validate.js'
 
 test('it should return true with function as value', t => {
   t.true(validate(function() {}))
