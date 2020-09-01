@@ -17,5 +17,8 @@
 		"nodeArguments": [
 			"--experimental-modules"
 		]
-	}
+  },
+  "files": [
+    "service"
+  ]
 }
