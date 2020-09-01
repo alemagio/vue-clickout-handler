@@ -19,6 +19,7 @@
 		]
   },
   "files": [
-    "service"
+    "util",
+    "vueClickOutFactory"
   ]
 }
