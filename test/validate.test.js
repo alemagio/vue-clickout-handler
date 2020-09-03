@@ -1,8 +1,17 @@
+
 import test from 'ava'
-import { validate } from '../util/validate.js'
+import { validate } from '../lib/validate.js'
+
+test('it should return false with empty value', t => {
+  t.false(validate())
+})
 
 test('it should return true with function as value', t => {
-  t.true(validate(function() {}))
+  t.true(validate(function () {}))
+})
+
+test('it should return false with unsupported option', t => {
+  t.false(validate({ foo: 'bar' }))
 })
 
 test('it should return false if handler is not a function', t => {
@@ -25,14 +34,14 @@ test('it should return true if excluded is an array of strings', t => {
   t.true(validate({ handler: () => {}, excluded: ['string', 'another string'] }))
 })
 
-test('it should return false if blockigConditions is not an array', t => {
-  t.false(validate({ handler: () => {}, excluded: ['string', 'another string'], blockingConditions: 'not an array' }))
+test('it should return false if disabled is not a boolean', t => {
+  t.false(validate({ handler: () => {}, excluded: ['string', 'another string'], disabled: 'not a boolean' }))
 })
 
-test('it should return false if blockigConditions contains non boolean values', t => {
-  t.false(validate({ handler: () => {}, excluded: ['string', 'another string'], blockingConditions: ['non boolean', false] }))
+test('it should return true if disabled option is not defined', t => {
+  t.true(validate({ handler: () => {}, excluded: ['string', 'another string'] }))
 })
 
 test('it should return true with complete valid options', t => {
-  t.true(validate({ handler: () => {}, excluded: ['string', 'another string'], blockingConditions: [true, false] }))
+  t.true(validate({ handler: () => {}, excluded: ['string', 'another string'], disabled: true }))
 })
