@@ -48,13 +48,18 @@ Or you can pass an object to include more options:
 <template>
   <div id="my-div">
   </div>
-  <div v-click-out="{ handler: onClickOut, excluded: ['#my-div']}">
+  <div v-click-out="{ handler: onClickOut, excluded: ['#my-div'], disabled: disabled}">
     ...
   </div>
 </template>
 
 <script>
   export default {
+    data () {
+      return {
+        disabled: false
+      }
+    },
     methods: {
       onClickOut () {
         // do something
@@ -89,10 +94,10 @@ Or you can pass an object to include more options:
             <td>A list of excluded elements, the handler will not be executed if any of these elements are clicked.</td>
         </tr>
         <tr>
-            <td>blockingConditions</td>
-            <td>Array</td>
+            <td>disabled</td>
+            <td>boolean</td>
             <td>false</td>
-            <td>A list of booleand conditions, if any of these is true the handler function will not be executed.</td>
+            <td>If true the handler will never be executed.</td>
         </tr>
     </tbody>
 </table>
