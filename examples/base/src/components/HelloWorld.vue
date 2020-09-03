@@ -2,8 +2,9 @@
   <div class="hello">
     <label for="blocked">Block click out</label>
     <input id="blocked" type="checkbox" v-model="blocked">
-    <div class="red" v-click-out="{ handler: onClickOut, excluded: ['.green'], blockingConditions: [blocked] }"></div>
+    <div class="red" v-click-out="{ handler: onClickOut, excluded: ['.green'], disabled: blocked }"></div>
     <div class="green"></div>
+    <button @click="checkOthers">Other</button>
   </div>
 </template>
 
@@ -18,6 +19,9 @@ export default {
   methods: {
     onClickOut () {
       console.log('Clicked out of red')
+    },
+    checkOthers () {
+      console.log('Clicked on other element')
     }
   }
 }
