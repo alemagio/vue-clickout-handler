@@ -1,12 +1,37 @@
 {
   "name": "vue-clickout-handler",
-  "repository": "alemagio/vue-clickout-handler",
   "version": "1.0.0",
-  "description": "A simple zero dependencies directive to detect click events outside of a certain element",
+  "description": "Zero dependencies directive to detect click events outside of a certain element",
   "main": "index.js",
   "license": "MIT",
   "private": false,
   "type": "module",
+  "author": {
+    "name": "alemagio",
+    "email": "alessandro.magionami@gmail.com",
+    "url": "https://github.com/alemagio"
+  },
+  "homepage": "https://github.com/alemagio/request-keeper",
+  "bugs": {
+    "url": "https://github.com/alemagio/request-keeper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alemagio/vue-clickout-handler"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "modal",
+    "directive",
+    "click",
+    "clickoutside",
+    "outside",
+    "out",
+    "clickout",
+    "click-out",
+    "click-outside"
+  ],
   "scripts": {
     "test": "c8 --all ava"
   },
