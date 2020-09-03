@@ -1,7 +1,7 @@
-import { createBind, createUnbind, createUpdate } from './vueClickOutFactory'
+import { bind, unbind, update } from './lib/vueClickOut.js'
 
 export const VueClickOut = {
-  bind: createBind(document),
-  update: createUpdate(document),
-  unbind: createUnbind(document)
+  bind,
+  update,
+  unbind
 }
