@@ -17,7 +17,7 @@ yarn add vue-clickout-hanlder
 ```js
 // main.js
 
-import { VueClickOut } from 'vue-click-out';
+import { VueClickOut } from 'vue-clickout-handler';
 
 Vue.directive('click-out', VueClickOut)
 ```
