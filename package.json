@@ -34,12 +34,14 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "publish": "yarn build && np --contents dist",
     "test": "c8 --all ava"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.0.0",
     "ava": "^3.12.1",
     "c8": "^7.3.0",
+    "np": "^6.5.0",
     "rollup": "^2.26.11",
     "rollup-plugin-copy": "^3.3.0"
   },
