@@ -33,11 +33,15 @@
     "click-outside"
   ],
   "scripts": {
+    "build": "rollup -c",
     "test": "c8 --all ava"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
     "ava": "^3.12.1",
-    "c8": "^7.3.0"
+    "c8": "^7.3.0",
+    "rollup": "^2.26.11",
+    "rollup-plugin-copy": "^3.3.0"
   },
   "ava": {
     "nodeArguments": [
@@ -45,7 +49,7 @@
     ]
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "c8": {
     "include": "lib"

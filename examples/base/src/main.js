@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { VueClickOut } from '../../../';
+import { VueClickOut } from '../../../dist';
 
 Vue.directive('click-out', VueClickOut)
 
