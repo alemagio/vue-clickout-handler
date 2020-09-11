@@ -1,5 +1,4 @@
 import commonjs from '@rollup/plugin-commonjs'
-import copy from 'rollup-plugin-copy'
 
 export default {
   input: [
@@ -10,13 +9,6 @@ export default {
     format: 'cjs'
   },
   plugins: [
-    commonjs(),
-    copy({
-      targets: [
-        { src: 'LICENSE', dest: 'dist' },
-        { src: 'README.md', dest: 'dist' },
-        { src: 'package.json', dest: 'dist' }
-      ]
-    })
+    commonjs()
   ]
 }
