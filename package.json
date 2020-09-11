@@ -34,6 +34,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "prepublishOnly": "yarn build",
     "release": "yarn build && np --contents dist",
     "test": "c8 --all ava"
   },
