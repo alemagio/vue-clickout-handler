@@ -5,11 +5,11 @@ This is a simple directive to react when a click happens outside of a certain el
 ## Installation
 
 ```
-npm install vue-clickout-hanlder --save
+npm install vue-clickout-handler --save
 ```
 
 ```
-yarn add vue-clickout-hanlder
+yarn add vue-clickout-handler
 ```
 
 ## Basic Usage
